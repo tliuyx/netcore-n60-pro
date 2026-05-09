@@ -21,7 +21,7 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
 
-git clone --depth 1 --filter=blob:none https://github.com/vernesong/OpenClash /tmp/OpenClash && mv /tmp/OpenClash/luci-app-openclash package/luci-app-openclash && rm -rf /tmp/OpenClash
+git clone --depth 1 https://github.com/vernesong/OpenClash /tmp/OpenClash && mv /tmp/OpenClash/luci-app-openclash package/luci-app-openclash && rm -rf /tmp/OpenClash
 
-git clone --depth 1 --filter=blob:none https://github.com/EasyTier/luci-app-easytier /tmp/easytier-tmp && mv /tmp/easytier-tmp/luci-app-easytier package/luci-app-easytier && mv /tmp/easytier-tmp/easytier package/easytier && rm -rf /tmp/easytier-tmp
+git clone --depth 1 https://github.com/EasyTier/luci-app-easytier /tmp/easytier-tmp && mv /tmp/easytier-tmp/luci-app-easytier package/luci-app-easytier && mv /tmp/easytier-tmp/easytier package/easytier && rm -rf /tmp/easytier-tmp
 

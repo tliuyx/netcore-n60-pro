@@ -20,7 +20,7 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 # 添加组播防火墙规则
-cat >> package/network/config/firewall/files/firewall.config <<EOF
+cat >> package/network/config/firewall/files/firewall.config <<ENDOFFIREWALL
 config rule
         option name 'Allow-UDP-igmpproxy'
         option src 'wan'
@@ -36,4 +36,8 @@ config rule
         option dest_ip '224.0.0.0/4'
         option proto 'udp'
         option target 'ACCEPT'
-EOF
+ENDOFFIREWALL
+
+# Make LED scripts executable
+[ -f files/usr/bin/led-night ] && chmod +x files/usr/bin/led-night
+[ -f files/usr/bin/led-day ] && chmod +x files/usr/bin/led-day

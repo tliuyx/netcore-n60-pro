@@ -1,0 +1,4 @@
+#!/bin/sh
+for d in /sys/class/leds/*/brightness; do
+    echo 0 > "$d" 2>/dev/null
+done

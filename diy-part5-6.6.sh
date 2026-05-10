@@ -39,5 +39,4 @@ config rule
 ENDOFFIREWALL
 
 # Make LED scripts executable
-[ -f files/usr/bin/led-night ] && chmod +x files/usr/bin/led-night
-[ -f files/usr/bin/led-day ] && chmod +x files/usr/bin/led-day
+chmod +x files/usr/bin/led-night files/usr/bin/led-day 2>/dev/null || true
